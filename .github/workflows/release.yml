@@ -1,0 +1,39 @@
+name: Build and Release Plugin
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Build Plugin
+      shell: pwsh
+      run: |
+        dotnet build QuickLook.Plugin.SlbViewer.csproj -c Release
+
+    - name: Package .qlplugin
+      shell: pwsh
+      run: |
+        ./pack.ps1 -Configuration Release
+
+    - name: Create Release
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v2
+      with:
+        files: QuickLook.Plugin.SlbViewer.qlplugin
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
