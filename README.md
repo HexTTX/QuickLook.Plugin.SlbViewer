@@ -6,6 +6,10 @@
 
 [English](#english) | [中文说明](#chinese)
 
+<p align="center">
+  <img src="assets/demo.webp" alt="QuickLook.Plugin.SlbViewer Demo" width="850">
+</p>
+
 ---
 
 <a name="english"></a>
@@ -34,7 +38,7 @@ A lightweight, high-performance [QuickLook](https://github.com/QL-Win/QuickLook)
 ### 📦 Installation
 
 #### Method 1: Spacebar One-Click Install (Recommended)
-1. Download `QuickLook.Plugin.SlbViewer.qlplugin` from [Releases](https://github.com/Hexon-X/QuickLook.Plugin.SlbViewer/releases).
+1. Download `QuickLook.Plugin.SlbViewer.qlplugin` from [Releases](https://github.com/HexTTX/QuickLook.Plugin.SlbViewer/releases).
 2. Select the downloaded file in File Explorer and press <kbd>Spacebar</kbd>.
 3. Click **Install** on the QuickLook prompt, then restart QuickLook.
 
@@ -81,7 +85,7 @@ powershell -ExecutionPolicy Bypass -File pack.ps1
 ### 📦 安装方式
 
 #### 方式一：空格一键安装（推荐）
-1. 在 [Releases](https://github.com/Hexon-X/QuickLook.Plugin.SlbViewer/releases) 页面下载 `QuickLook.Plugin.SlbViewer.qlplugin`；
+1. 在 [Releases](https://github.com/HexTTX/QuickLook.Plugin.SlbViewer/releases) 页面下载 `QuickLook.Plugin.SlbViewer.qlplugin`；
 2. 在 Windows 资源管理器中选中该 `.qlplugin` 文件，按下 <kbd>空格键</kbd>；
 3. 点击界面中的 **Install** 按钮，安装后重启 QuickLook 即可生效。
 
